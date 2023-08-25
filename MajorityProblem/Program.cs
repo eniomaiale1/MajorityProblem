@@ -9,11 +9,12 @@ var mooreSoltuion = new MooreSolution();
 
 int[] arrSorting = generatArray(1000000, 1, 100, 2);
 int[] arrMoore = (int[])arrSorting.Clone();
+int[] arrSimple = (int[])arrSorting.Clone();
 
-//var watchSimpleSolution = System.Diagnostics.Stopwatch.StartNew();
-//var (simpleFound, simpleCount) = simpleSolution.mostFrequent(arr, arr.Length);
-//watchSimpleSolution.Stop();
-//var simpleSolutionTime = watchSimpleSolution.ElapsedMilliseconds;
+var watchSimpleSolution = System.Diagnostics.Stopwatch.StartNew();
+var (simpleFound, simpleCount) = simpleSolution.mostFrequent(arrSimple, arrSimple.Length);
+watchSimpleSolution.Stop();
+var simpleSolutionTime = watchSimpleSolution.ElapsedMilliseconds;
 
 var watchSortingSolution = System.Diagnostics.Stopwatch.StartNew();
 var (sortingFound, sortingCount) = sortingSolution.mostFrequent(arrSorting, arrSorting.Length);
